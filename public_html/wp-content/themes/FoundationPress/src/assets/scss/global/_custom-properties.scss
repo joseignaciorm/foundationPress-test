@@ -1,0 +1,38 @@
+
+/* Base Theme */
+body {
+    color: $color-primary;
+}
+p {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1.61;
+}
+
+p, small, .date, a {
+    line-height: 1.4;
+}
+
+.card {
+    border: 2px solid blue;
+    padding: 1.275rem 0.8125rem;
+
+    @include breakpoint(large) {
+        padding: 1.8125rem 1.625rem;
+    }
+}
+
+.card-section {
+    padding: 0;
+}
+
+$p-t: 2rem;
+$p-b: 2rem;
+.section-p-t-b {
+    padding-top: $p-t;
+    padding-bottom: $p-b;
+}
+
+.m-b {
+    margin-bottom: .5rem;
+}
