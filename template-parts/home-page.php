@@ -1,10 +1,18 @@
+<?php
+/*
+Template Name: Home
+*/
+get_header(); ?>
 
 	<div class="news grid-container full">
 		<section class="grid-x grid-container">
 			<h1 class="news--title">Noticias</h1>
+			
+			
 			<div class="grid-x grid-margin-x">
 				<?php 
 					$newsPost = new WP_Query('post=167&order=ASC');
+					
 					if ( $newsPost->have_posts() ) :
 					while ( $newsPost->have_posts() ) : $newsPost->the_post(); 
 				?>
@@ -15,6 +23,7 @@
 					endif; // end if
 					wp_reset_postdata();
 				?>
+				
 			</div>
 			<div class="btn">
 				<a href="" class="button expanded">Ver mas noticias</a>
@@ -50,6 +59,6 @@
 	</div>
 
 
-	
+<?php get_footer();
 	
 		

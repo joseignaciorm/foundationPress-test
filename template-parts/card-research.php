@@ -2,11 +2,11 @@
 	<article class="card research">
 		<p class="title-up">Publicación</p>
 		<div class="card-section">
-		<a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
+			<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			<div class="grid-y m-b card-author">
 				<a class="card-author--title" href="">Autor/a</a>
 				<small class="card-author--name">
-					<em><b><h1><?php the_author_posts_link(); ?></h1> </b><span>Ana Sedeño Valdellós</span></em>
+					<em><b><h1><?php the_author_posts_link(); ?><?php echo get_the_author_meta('first_name'); ?></h1> </b><span><?php echo get_the_author_meta('last_name'); ?>Ana Sedeño Valdellós</span></em>
 				</small>
 			</div>
 			<div class="grid-y m-b card-date">

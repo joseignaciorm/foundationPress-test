@@ -22,7 +22,7 @@
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
 
-	<header class="site-header grid-container" data-sticky-container  role="banner">
+	<header class="site-header grid-container full" data-sticky-container  role="banner">
 		<!-- Menu Mobile -->
 		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle();?> >
 			<div class="title-bar-left">
@@ -40,6 +40,9 @@
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</div>
+				<?php if(is_page(200)){?>
+					<h1>Estas en la page de proyecto</h1>
+				<?php } ?>
 			</div>
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
